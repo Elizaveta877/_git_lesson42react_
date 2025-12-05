@@ -1,0 +1,234 @@
+/* index.css - Глобальні стилі для всього застосунку */
+
+/* --- ГЛОБАЛЬНІ СТИЛІ (для App.jsx) --- */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.global-container {
+    min-height: 100vh;
+    background-color: #0d0e14; /* Дуже темний фон */
+    padding: 48px 0;
+    color: white;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 48px;
+    padding: 0 16px;
+}
+
+.app-title {
+    font-size: 4rem; 
+    font-weight: 800;
+    color: #93c5fd; 
+    letter-spacing: -0.05em;
+}
+
+.app-subtitle {
+    font-size: 1.25rem;
+    color: #9ca3af;
+    margin-top: 12px;
+    font-weight: 300;
+}
+
+.app-footer {
+    text-align: center;
+    margin-top: 64px;
+    color: #525252;
+    font-size: 0.875rem;
+    padding: 0 16px;
+}
+
+.app-link {
+    color: #6366f1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.app-link:hover {
+    color: #818cf8;
+}
+
+/* --- СТИЛІ КОМПОНЕНТА DataFetcher --- */
+
+.data-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.data-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #4f46e5;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+}
+
+.data-title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #93c5fd;
+}
+
+.data-subtitle {
+    font-size: 1.125rem;
+    color: #9ca3af;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.refresh-button {
+    padding: 8px 16px;
+    background-color: #4f46e5;
+    color: white;
+    font-weight: 600;
+    border-radius: 9999px;
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
+
+.refresh-button:hover {
+    background-color: #4338ca;
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.4);
+    transform: translateY(-1px);
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* --- Картка Користувача --- */
+
+.user-card {
+    padding: 24px;
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.user-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px rgba(79, 70, 229, 0.4);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-username {
+    font-size: 0.875rem;
+    color: #93c5fd;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #374151;
+    padding-bottom: 8px;
+}
+
+.card-detail {
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+}
+
+.card-detail span {
+    font-weight: 500;
+    color: #e5e7eb;
+}
+
+/* --- Стан Завантаження --- */
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 256px;
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 1rem;
+    margin: 16px auto;
+    max-width: 1280px;
+    color: #93c5fd;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.loader-icon {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    margin-right: 12px;
+    font-size: 24px;
+    line-height: 1;
+}
+
+
+/* --- Стан Помилки --- */
+
+.error-container {
+    padding: 16px 24px;
+    background-color: #450a0a;
+    border: 1px solid #b91c1c;
+    color: #fca5a5;
+    border-radius: 1rem;
+    margin: 16px auto;
+    max-width: 1280px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.error-content {
+    display: flex;
+    align-items: center;
+}
+
+.error-icon {
+    margin-right: 12px;
+    font-size: 24px;
+}
+
+.error-button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    background-color: #dc2626;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
+
+.error-button:hover {
+    background-color: #b91c1c;
+}
