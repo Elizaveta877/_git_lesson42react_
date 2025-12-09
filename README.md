@@ -1,16 +1,44 @@
-# React + Vite
+# React Data Fetcher App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 Огляд проєкту
 
-Currently, two official plugins are available:
+Цей застосунок на **React** демонструє асинхронне отримання даних (`Data Fetching`) з віддаленого API за допомогою бібліотеки **Axios** та React Hooks (`useState`, `useEffect`, `useCallback`).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Ключові особливості:**
 
-## React Compiler
+* Обробка трьох станів: **Завантаження** (Loading), **Помилка** (Error), **Дані** (Success).
+* Можливість повторного завантаження даних (кнопка "Оновити").
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Дані отримуються з: `https://jsonplaceholder.typicode.com/users`.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Швидкий старт
+
+Для запуску проєкту локально:
+
+1.  **Клонування:**
+    ```bash
+    git clone <URL_ВАШОГО_РЕПОЗИТОРІЮ>
+    cd <ІМ'Я_ПАПКИ_ПРОЄКТУ>
+    ```
+
+2.  **Встановлення залежностей:**
+    ```bash
+    npm install
+    # або yarn install
+    ```
+
+3.  **Запуск:**
+    ```bash
+    npm run dev
+    # або yarn dev
+    ```
+
+Проєкт буде доступний за посиланням `http://localhost:5173`.
+
+---
+
+## 🔗 Демо
+
+[Переглянути демо-версію] git-lesson42react.vercel.app
