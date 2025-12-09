@@ -36,17 +36,32 @@ const DataFetcher = () => {
 
 
   if (loading) {
-
+return (
+      <div className="status-message loading">
+        ⏳ Завантаження даних... Будь ласка, зачекайте.
+      </div>
+    );
   }
 
   if (error) {
-
+    return (
+      <div className="status-message error">
+        ⚠️ Виникла помилка: {error}
+        <button onClick={fetchData} className="retry-button">
+          Спробувати ще раз
+        </button>
+      </div>
+    );
   }
 
 
   if (!data) {
 
-    return null;
+    return (
+      <div className="status-message no-data">
+        ℹ️ Не вдалося отримати дані користувачів.
+      </div>
+    );
   }
 
 
