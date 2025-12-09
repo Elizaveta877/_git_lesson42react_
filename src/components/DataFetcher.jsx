@@ -64,7 +64,6 @@ return (
     );
   }
 
-
   return (
     <div className="data-container">
       <div className="data-header-row">
